@@ -9,7 +9,7 @@ import org.springframework.web.filter.DelegatingFilterProxy;
 @Configuration
 public class WebConfig {
 
-    @Bean
+/*    @Bean
     public FilterRegistrationBean delegatingFilterProxy(){
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         DelegatingFilterProxy proxy = new DelegatingFilterProxy();
@@ -17,11 +17,11 @@ public class WebConfig {
         proxy.setTargetBeanName("shiroFilter");
         filterRegistrationBean.setFilter(proxy);
         return filterRegistrationBean;
-    }
+    }*/
 
-    @Bean("shiroFilter")		// 这个位置添加内容
-    public ShiroFilterFactoryBean shiroFilterFactoryBean() {
-        ShiroFilterFactoryBean filterFactoryBean = new ShiroFilterFactoryBean();
-        return filterFactoryBean;
-    }
+//    @Bean("shiroFilter")		// 这个位置添加内容
+//    public ShiroFilterFactoryBean shiroFilterFactoryBean() {
+//        ShiroFilterFactoryBean filterFactoryBean = new ShiroFilterFactoryBean();
+//        return filterFactoryBean;
+//    }
 }
