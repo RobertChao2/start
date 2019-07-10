@@ -10,4 +10,9 @@ public class TestController {
     public String getHello(){
         return "hello , Spring Boot !!! I think you are a good start .";
     }
+
+    @GetMapping("git")
+    public String git(){
+        return "hello ,finish Git update.";
+    }
 }
