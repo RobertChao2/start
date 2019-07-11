@@ -1,7 +1,10 @@
 package cn.chao.maven.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class UsersEntity {
     /**
      *

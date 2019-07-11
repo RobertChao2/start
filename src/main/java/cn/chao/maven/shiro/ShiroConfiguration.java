@@ -59,7 +59,7 @@ public class ShiroConfiguration {
         // 登出
         map.put("logout","logout");
         // 访问的所有内容都需要进行用户认证
-        map.put("/**","authc");
+        map.put("/maven/**","authc");
         // 用户注册的界面当然是合法的默认开放的
         map.put("/addUser","anon");
         // 登录
