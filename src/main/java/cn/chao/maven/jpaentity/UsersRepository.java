@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * 声明一个接口继承于CrudRepository 或者 PagingAndSortingRepository，JpaRepository,Repository
+ *  不需要使用功能注解。
  */
 public interface UsersRepository extends CrudRepository<JPATbUsersEntity, Long> {
 

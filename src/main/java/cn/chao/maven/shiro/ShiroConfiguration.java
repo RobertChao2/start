@@ -33,7 +33,7 @@ public class ShiroConfiguration {
         // 使用 MD5 加密算法，进行加密。
         hashedCredentialsMatcher.setHashAlgorithmName("md5");
         // 设置散列次数，意味加密几次
-        hashedCredentialsMatcher.setHashIterations(2);
+        hashedCredentialsMatcher.setHashIterations(1);
         return hashedCredentialsMatcher;
     }
 
@@ -56,6 +56,8 @@ public class ShiroConfiguration {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         Map<String,String> map = new HashMap<>();
+        // 加载静态的资源
+        map.put("/static/**", "anon");
         // 登出
         map.put("logout","logout");
         // 访问的所有内容都需要进行用户认证
