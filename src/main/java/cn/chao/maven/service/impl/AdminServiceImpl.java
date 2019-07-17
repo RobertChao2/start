@@ -9,14 +9,18 @@ import cn.chao.maven.service.AdminService;
 import cn.chao.maven.utils.ResultUtil;
 import cn.chao.maven.vo.Menu;
 import cn.chao.maven.vo.XtreeData;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
+@Log4j2
 @Service
+@Transactional
 public class AdminServiceImpl implements AdminService {
 	@Autowired
 	private AdminEntityMapper adminMapper;
@@ -332,7 +336,8 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public void insRole(RolesEntity role, String m) {
 		//维护角色表
-		tbRolesMapper.insert(role);
+		int i1 = tbRolesMapper.insert(role);
+		log.debug("插入到角色表中：" + i1 + ",角色信息：" + role);
 		// 维护角色-菜单表
 		if (m != null && m.length() != 0) {
 			String[] array = m.split(",");
@@ -351,13 +356,19 @@ public class AdminServiceImpl implements AdminService {
 			    }
 			}
 			// 重新赋予权限
-			if (result != null && result.size() > 0) {
-				for (int i = 0; i < result.size(); i++) {
+			if (result.size() > 0) {
+				log.debug("重新赋权："+ result);
+				RolesEntityExample example = new RolesEntityExample();
+				example.createCriteria().andRoleNameEqualTo(role.getRoleName());
+				List<RolesEntity> rolesEntities = tbRolesMapper.selectByExample(example);
+				role = rolesEntities.get(0);
+				for (String s : result) {
 					RolesMenusEntityKey record = new RolesMenusEntityKey();
-					record.setMenuId(Long.parseLong(result.get(i)));
+					record.setMenuId(Long.parseLong(s));
 					record.setRoleId(role.getRoleId());
 					// 维护角色—菜单表
-					tbRolesMenusMapper.insert(record);
+					int i = tbRolesMenusMapper.insert(record);
+					log.debug("维护角色表--菜单表：" + i);
 				}
 			}
 		}

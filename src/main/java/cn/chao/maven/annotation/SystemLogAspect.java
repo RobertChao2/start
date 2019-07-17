@@ -16,8 +16,10 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.annotation.Resource;    
 import javax.servlet.http.HttpServletRequest;    
-import javax.servlet.http.HttpSession;    
+import javax.servlet.http.HttpSession;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -36,8 +38,14 @@ public  class SystemLogAspect {
     //Controller层切点    
     @Pointcut("@annotation(SysLog)")
      public  void controllerAspect() {    
-    }    
-    
+    }
+
+    // 基本是数据类型
+    private static String[] types = {"java.lang.Integer", "java.lang.Double",
+            "java.lang.Float", "java.lang.Long", "java.lang.Short",
+            "java.lang.Byte", "java.lang.Boolean", "java.lang.Char",
+            "java.lang.String", "int", "double", "long", "short", "byte",
+            "boolean", "char", "float"};
     /**  
      * 前置通知 用于拦截Controller层记录用户的操作  
      *  
@@ -58,30 +66,59 @@ public  class SystemLogAspect {
         String ip= WebUtils.getRemoteAddr(request);
         String method = joinPoint.getSignature().getDeclaringTypeName() + 
                 "." + joinPoint.getSignature().getName();
-        String params = ""; 
+        StringBuilder params = new StringBuilder();
+        boolean b = true;
         if (joinPoint.getArgs() !=  null && joinPoint.getArgs().length > 0) {    
             for ( int i = 0; i < joinPoint.getArgs().length; i++) {    
-           	 params+=joinPoint.getArgs()[i]+";";   
+//           	 params+=joinPoint.getArgs()[i]+";";
+                // 获取对象类型
+                System.out.println("当前参数："+ joinPoint.getArgs()[i]);
+                String typeName = joinPoint.getArgs()[i].getClass().getTypeName();
+                System.out.println("当前参数类型是："+typeName);
+                // 判断类型。
+                int a = 0;
+                for (String t : types) {
+                    if (!t.equals(typeName)) {
+                        // 2 通过反射获取实体类属性
+                        a++;
+                    }
+                }
+                //
+                if(a == types.length){
+                    b = false;
+                }
+                //
+                System.out.println("赋值操作");
+                if(b) {
+                    // 1 判断是否是基础类型
+                    System.out.println("基本类型设置参数1");
+                    params.append(joinPoint.getArgs()[i]).append("; ");
+                } else {
+                    // 2 通过反射获取实体类属性
+                    System.out.println("基本类型设置参数2");
+                    params.append(getFieldsValue(joinPoint.getArgs()[i]));
+                }
            }    
        }    
-         try {    
-            //*========控制台输出=========*//    
-            //System.out.println("=====前置通知开始=====");    
-            String operation=getControllerMethodDescription(joinPoint);    
+         try {
+            //*========控制台输出=========*//
+            //System.out.println("=====前置通知开始=====");
+            String operation=getControllerMethodDescription(joinPoint);
             String username=user.getUsername();
-            //System.out.println("请求参数:" + params);    
+            //System.out.println("请求参数:" + params);
             LogEntity log=new LogEntity();
 //            log.setCreateTime(MyUtil.getNowDateStr2());
             log.setCreateTime(new Date());
             log.setIp(ip);
             log.setOperation(operation);
-            log.setParams(params);
+            log.setParams(String.valueOf(params));
             log.setUsername(username);
             log.setMethod(requestURI);
-			//*========保存数据库日志=========*// 
-            //System.out.println(log);
+			//*========保存数据库日志=========*//
+            System.out.println(log);
+             System.out.println(params);
             logServiceImp.insLog(log);
-            //保存数据库    
+            //保存数据库
         }  catch (Exception e) {    
             //记录本地异常日志    
             logger.error("==前置通知异常==");    
@@ -113,5 +150,44 @@ public  class SystemLogAspect {
             }    
         }    
          return description;    
-    }    
+    }
+
+
+    /**
+     * 解析实体类，获取实体类中的属性
+     * @param obj 实体类
+     * @return
+     */
+    public static String getFieldsValue(Object obj) {
+        //通过反射获取所有的字段，getFileds()获取public的修饰的字段
+        //getDeclaredFields获取private protected public修饰的字段
+        Field[] fields = obj.getClass().getDeclaredFields();
+        String typeName = obj.getClass().getTypeName();
+        for (String t : types) {
+            if (t.equals(typeName)) {
+                return "";
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        for (Field f : fields) {
+            //在反射时能访问私有变量
+            f.setAccessible(true);
+            try {
+                for (String str : types) {
+                    //这边会有问题，如果实体类里面继续包含实体类，这边就没法获取。
+                    //其实，我们可以通递归的方式去处理实体类包含实体类的问题。
+                    if (f.getType().getName().equals(str)) {
+                        sb.append(f.getName() + " : " + f.get(obj) + ", ");
+                    }
+                }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+        sb.append("}");
+        return sb.toString();
+    }
 }    

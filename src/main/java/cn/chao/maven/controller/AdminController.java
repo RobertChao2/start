@@ -1,9 +1,12 @@
 package cn.chao.maven.controller;
 
 import java.awt.image.BufferedImage;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,6 +22,7 @@ import cn.chao.maven.vo.Menu;
 import cn.chao.maven.vo.XtreeData;
 
 import com.google.code.kaptcha.Producer;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -30,16 +34,16 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("sys")
+@Log4j2
 public class AdminController {
 	@Autowired
 	private AdminService adminServiceImpl;
@@ -50,12 +54,15 @@ public class AdminController {
 	public String main() {
 		return "page/main";
 	}
+
 	@RequestMapping("/index")
 	public String index(HttpServletRequest req) {
 		AdminEntity admin = (AdminEntity)SecurityUtils.getSubject().getPrincipal();
+//		log.debug(admin);
 		req.setAttribute("admin", admin);
-		return "redirect:/index.html";
+		return "redirect:/index.html";      // 重定向之后，可能并不带着内容。
 	}
+
 	@RequestMapping("/refuse")
 	public String refuse() {
 		return "refuse";
@@ -279,7 +286,8 @@ public class AdminController {
 		if(r!=null){
 			return new ResultUtil(500, "角色名已存在,请重试！");
 		}
-		//角色信息保存
+		log.debug("权限管理：" + m);
+		// 角色信息保存
 		adminServiceImpl.insRole(role, m);
 		return ResultUtil.ok();
 	}
@@ -438,7 +446,17 @@ public class AdminController {
 		}
 		return new ResultUtil(0);
 	}
-	
+
+	/**
+	 * 对前台传来的数据类型做一个数据绑定。
+	 * @param binder
+	 */
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		CustomDateEditor editor = new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"),true);
+		binder.registerCustomEditor(Date.class, editor);
+	}
+
 	/**
 	 * 增加管理員
 	 * 日期类型会导致数据填充失败，请求没反应
@@ -450,11 +468,12 @@ public class AdminController {
 	@RequiresPermissions("sys:admin:save")
 	@ResponseBody
 	public ResultUtil insAdmin(AdminEntity admin) {
-		//防止浏览器提交
+		// 防止浏览器提交
 		AdminEntity a = adminServiceImpl.selAdminByUserName(admin.getUsername());
 		if(a!=null){
 			return new ResultUtil(500, "用户名已存在,请重试！");
 		}
+		log.debug("增加新的管理员："+admin);
 		adminServiceImpl.insAdmin(admin);
 		return ResultUtil.ok();
 	}
@@ -469,9 +488,9 @@ public class AdminController {
 		return "page/admin/editAdmin";
 	}
 	
-	@RequestMapping("/checkAdminByEmail")
+	@RequestMapping("/checkAdminByEmail/{eMail}/{username}")
 	@ResponseBody
-	public ResultUtil checkAdminByEmail(String eMail,String username) {
+	public ResultUtil checkAdminByEmail(@PathVariable("eMail") String eMail,@PathVariable("username") String username) {
 		AdminEntity admin=adminServiceImpl.selAdminByEmail(eMail,username);
 		if(admin!=null){
 			return new ResultUtil(500,"邮箱已被占用！");
@@ -589,10 +608,11 @@ public class AdminController {
 	}
 	
 	@SysLog("维护菜单信息")
-	@RequestMapping("/menuForm")
+	@RequestMapping(value = "/menuForm",method = RequestMethod.POST)
 	@RequiresPermissions(value={"sys:menu:save","sys:menu:update"})
 	@ResponseBody
 	public ResultUtil menuForm(MenusEntity menus,String flag){
+		log.debug("参数的内容：" + menus + ",和" + flag);
 		if(StringUtils.isBlank(flag)){
 			//同级菜单名不相同
 			List<MenusEntity> data=adminServiceImpl.checkTitleSameLevel(menus);

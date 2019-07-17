@@ -9,14 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Log
 public class PathController {
 
-    @RequestMapping("{path}")
+/*    @RequestMapping("{path}")
     public String paramPath(@PathVariable("path") String path){
         log.fine("PathController  ===》 当前访问的路径 Path：" + path);
         return path;
-    }
+    }*/
 
     @RequestMapping({"/login","/"})
     public String index_1(){
         return "login.html";
+    }
+
+    @RequestMapping({"/index"})
+    public String index_2(){
+        return "index.html";
+    }
+
+    @RequestMapping({"/page/shiroTag"})
+    public String shiroTAG(){
+        return "page/shiroTag.html";
     }
 }

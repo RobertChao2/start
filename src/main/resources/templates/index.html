@@ -37,7 +37,13 @@
                 <li class="layui-nav-item" pc>
                     <a href="javascript:;">
                         <i class="layui-icon">&#xe612;</i>
-                        <cite><shiro:principal property="fullname"/>  </cite>
+                        <!--th:value="${admin?}  使用这样的方式判断是否为空"-->
+                        <cite>
+                            <!-- 验证当前用户是否为“访客”，即未认证（包含未记住）的用户。 -->
+                            <p shiro:guest="">Please <a href="login.html">login</a></p>
+                            <!--${application.admin?.username}-->
+                            <shiro:principal property="fullname"/><!-- 显示用户的身份名称 -->
+                        </cite>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" data-url="sys/personalData"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>

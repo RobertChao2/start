@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8" />
+    <title>Shiro 的标签使用</title>
+</head>
+<body>
+    <h3>Shiro Tag 标签使用展示内容页面。</h3>
+    <!-- 验证当前用户是否为“访客”，即未认证（包含未记住）的用户。 -->
+    <p shiro:guest="">当前用户未登录，请<a href="login.html">登录，跳转到登录页面</a></p>
+    <!-- 认证通过或已记住的用户。 -->
+    <p shiro:user="">
+        认证通过或已记住的用户。Welcome back John! Not John? Click <a href="login.html">here</a> to login.
+    </p>
+    <!-- 已认证通过的用户。不包含已记住的用户，这是与user标签的区别所在。 -->
+    <p shiro:authenticated="">
+        已认证通过的用户：Hello, <span shiro:principal=""></span>, how are you today?
+    </p>
+    <a shiro:authenticated="" href="updateAccount.html">Update your contact information</a>
+    <!-- 输出当前用户信息，通常为登录帐号信息。 -->
+    <p>输出当前用户信息，通常为登录帐号信息： <shiro:principal/>, how are you today?</p>
+    <!-- 未认证通过用户，与authenticated标签相对应。与guest标签的区别是，该标签包含已记住用户。 -->
+    <p shiro:notAuthenticated="">
+        未认证通过用户：Please <a href="login.html">login</a> in order to update your credit card information.
+    </p>
+    <!-- 验证当前用户是否属于该角色。 -->
+    <a shiro:hasRole="admin" href="admin.html">Administer the system，用户拥有 admin 权限。</a><!-- 拥有该角色 -->
+    <!-- 与hasRole标签逻辑相反，当用户不属于该角色时验证通过。 -->
+    <p shiro:lacksRole="developer"><!-- 没有该角色 -->
+        Sorry, you are not allowed to developer the system.。用户没有相应的 developer 的权限。
+    </p>
+    <!-- 验证当前用户是否属于以下所有角色。 -->
+    <p shiro:hasAllRoles="developer, admin"><!-- 角色与判断 -->
+        You are a developer and a admin.
+    </p>
+    <!-- 验证当前用户是否属于以下任意一个角色。 -->
+    <p shiro:hasAnyRoles="admin, vip, developer,1"><!-- 角色或判断 -->
+        You are a admin, vip, or developer.
+    </p>
+    <!--验证当前用户是否拥有指定权限。 -->
+    <a shiro:hasPermission="sys:role:list" href="createUser.html">拥有角色列表的查看权限</a><!-- 拥有权限 -->
+    <!-- 与hasPermission标签逻辑相反，当前用户没有制定权限时，验证通过。 -->
+    <p shiro:lacksPermission="sys:role:save"><!-- 没有权限 -->
+        Sorry, you are not allowed to delete user accounts.
+    </p>
+    <!-- 验证当前用户是否拥有以下所有角色。 -->
+    <p shiro:hasAllPermissions="sys:role:list, sys:role:save"><!-- 权限与判断 -->
+        You can see or add users. 你能够拥有查看和保存角色的管理权限，
+    </p>
+    <!-- 验证当前用户是否拥有以下任意一个权限。 -->
+    <p shiro:hasAnyPermissions="sys:role:list, sys:role:save"><!-- 权限或判断 -->
+        You can see or delete users.当前拥有查看和保存角色的管理权限其中的一个权限，
+    </p>
+    <a shiro:hasPermission="sys:role:list, sys:role:save" href="createUser.html">Create a new User</a>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package cn.chao.maven.shiro;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
@@ -18,6 +19,11 @@ import java.util.Properties;
 
 @Configuration
 public class ShiroConfiguration {
+
+    @Bean(name = "shiroDialect")
+    public ShiroDialect shiroDialect(){
+        return new ShiroDialect();
+    }
 
     // 将自己的验证方式加入到容器中
     @Bean
