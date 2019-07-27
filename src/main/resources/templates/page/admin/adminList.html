@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="../css/list.css" media="all"/>
 </head>
 <body class="childrenBody">
-<input type="hidden" id="adminId"
-       value="<shiro:principal property='id'/>" />
+<input type="hidden" id="adminId" value="<shiro:principal property='id'/>" />   <!-- 使用这种方式并不能填充 value 的值为 认证用户的 id 值。 选择隐藏。 -->
 <blockquote class="layui-elem-quote list_search">
     <shiro:hasPermission name="sys:admin:save">
         <div class="layui-inline">

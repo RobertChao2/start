@@ -11,8 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,7 +32,7 @@ public class TestController {
 
     @GetMapping("git")
     public String git(){
-        return "hello ,finish Git update.";
+        return "hello ,finish Git update. 使用需要的 Git 。";
     }
 
     @GetMapping("mybatis")

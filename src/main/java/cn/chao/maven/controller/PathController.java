@@ -20,13 +20,18 @@ public class PathController {
         return "login.html";
     }
 
-    @RequestMapping({"/index"})
+    @RequestMapping({"index"})
     public String index_2(){
         return "index.html";
     }
 
-    @RequestMapping({"/page/shiroTag"})
+    @RequestMapping({"page/shiroTag"})
     public String shiroTAG(){
         return "page/shiroTag.html";
+    }
+
+    @RequestMapping("page/webmagic/webMagicList")
+    public String WebMagicList(){
+        return "/page/webmagic/webMagicList";
     }
 }
