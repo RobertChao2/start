@@ -32,7 +32,7 @@ public class TestController {
 
     @GetMapping("git")
     public String git(){
-        return "hello ,finish Git update. 使用需要的 Git 。";
+        return "hello ,finish Git update. 使用需要的 Git 。并且需要 GitHub 账户进行登录。";
     }
 
     @GetMapping("mybatis")
