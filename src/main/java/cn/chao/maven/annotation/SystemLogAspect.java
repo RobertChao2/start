@@ -28,16 +28,16 @@ import java.util.Date;
  */
 @Aspect    
 @Component    
-public  class SystemLogAspect {    
+public class SystemLogAspect {
     //注入Service用于把日志保存数据库    
-    @Resource    
+    @Resource
     private LogService logServiceImp;
     //本地异常日志记录对象    
-    private  static  final Logger logger = LoggerFactory.getLogger(SystemLogAspect. class);    
+    private static final Logger logger = LoggerFactory.getLogger(SystemLogAspect. class);
     
     //Controller层切点    
     @Pointcut("@annotation(SysLog)")
-     public  void controllerAspect() {    
+    public void controllerAspect() {
     }
 
     // 基本是数据类型
@@ -58,7 +58,7 @@ public  class SystemLogAspect {
         HttpSession session = request.getSession();    
         //读取session中的用户    
         AdminEntity user = (AdminEntity)SecurityUtils.getSubject().getPrincipal();
-        //请求的IP    
+        //请求的IP
         //String ip = request.getRemoteAddr();
         
         String requestURI=request.getRequestURI();
@@ -181,9 +181,7 @@ public  class SystemLogAspect {
                         sb.append(f.getName() + " : " + f.get(obj) + ", ");
                     }
                 }
-            } catch (IllegalArgumentException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
+            } catch (IllegalArgumentException | IllegalAccessException e) {
                 e.printStackTrace();
             }
         }
