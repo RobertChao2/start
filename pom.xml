@@ -179,6 +179,20 @@
             </exclusions>
         </dependency>
         <!-- WebMagic是一个简单灵活的Java爬虫框架。基于WebMagic，你可以快速开发出一个高效、易维护的爬虫。 -->
+        <!-- POI 效率高，支持公式，宏，能够修饰单元格属性，支持字体、数字、日期操作 -->
+        <!-- poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <!-- poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <!-- POI 效率高，支持公式，宏，能够修饰单元格属性，支持字体、数字、日期操作 -->
     </dependencies>
 
     <build>

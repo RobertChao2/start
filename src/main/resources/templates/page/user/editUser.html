@@ -86,14 +86,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">地址</label>
             <div class="layui-input-block">
-                <input type="text" name="address" class="layui-input userName" lay-verify="required" placeholder="请输入地址" value="${user.address }">
+                <input type="text" name="address" class="layui-input userName" lay-verify="required" placeholder="请输入地址" th:value="${user.address }">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">手机号</label>
             <div class="layui-input-block">
                 <input type="text" name="phone" class="layui-input userName"
-                       lay-verify="phone" placeholder="请输入手机号" value="${user.phone }">
+                       lay-verify="phone" placeholder="请输入手机号" th:value="${user.phone }">
             </div>
         </div>
         <div class="layui-form-item">
@@ -142,6 +142,7 @@
                 <button class="layui-btn" lay-submit="" lay-filter="updUser">立即保存</button>
             </div>
         </div>
+    </div>
 </form>
 <script type="text/javascript" th:src="@{/layui/layui.js}"></script>
 <script type="text/javascript" th:src="@{/page/user/editUser.js}"></script>

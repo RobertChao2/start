@@ -11,10 +11,18 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.Filter;
 import javax.servlet.Servlet;
 
+
+/**
+ *  设置 Druid 的管理器，访问 /druid/* 界面。
+ */
 @Configuration
 @Slf4j
 public class DruidConfiguration {
 
+    /**
+     *  登录 Druid 管理器的设置
+     * @return
+     */
     @Bean
     public ServletRegistrationBean druidServletRegistrationBean() {
         ServletRegistrationBean<Servlet> servletRegistrationBean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");

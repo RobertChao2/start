@@ -47,18 +47,22 @@
         <div style="margin-top: 1%">
             <div class="layui-inline">
                 <input type="text" id="createTimeStart"
-                       class="layui-input userName" name="createTimeStart"
-                       placeholder="注册时间(开始)" value="">
+                       class="layui-input userName" name="createTimeStart" placeholder="注册时间(开始)" value="">
             </div>
             <div class="layui-inline">
                 <input type="text" id="createTimeEnd" class="layui-input userName"
                        name="createTimeEnd" placeholder="注册时间(结束)" value="">
             </div>
-            <a class="layui-btn search_btn" lay-submit="" data-type="search"
-               lay-filter="search">查询</a>
+            <a class="layui-btn search_btn" lay-submit="" data-type="search" lay-filter="search">查询</a>
+            <div class="layui-inline">（支持模糊查询）</div>
             <shiro:hasPermission name="user:user:save">
                 <div class="layui-inline">
                     <a class="layui-btn layui-btn-normal userAdd_btn">添加用户</a>
+                </div>
+            </shiro:hasPermission>
+            <shiro:hasPermission name="user:user:save">
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal usersAdd_btn">批量用户</a>
                 </div>
             </shiro:hasPermission>
             <shiro:hasPermission name="user:user:delete">
@@ -66,7 +70,6 @@
                     <a class="layui-btn layui-btn-danger batchDel">批量删除</a>
                 </div>
             </shiro:hasPermission>
-            <div class="layui-inline">（支持模糊查询）</div>
         </div>
     </form>
 </blockquote>
@@ -100,15 +103,13 @@
 layui.config({
         base : "js/"
     }).use([ 'form', 'layer', 'jquery', 'table', 'laydate' ],function() {
-            var form = layui.form, table = layui.table, layer = parent.layer === undefined ? layui.layer: parent.layer, laydate = layui.laydate
-            $ = layui.jquery,
+            var form = layui.form, table = layui.table, layer = parent.layer === undefined ? layui.layer: parent.layer, laydate = layui.laydate,$ = layui.jquery,
                 nowTime = new Date().valueOf(),
                 max = null,
                 active = {
                     search : function() {
                         var nickname = $('#nickname'), sex = $('#sex option:selected'), status = $('#status option:selected');
-                        createTimeStart = $("#createTimeStart"),
-                            createTimeEnd = $("#createTimeEnd");
+                        createTimeStart = $("#createTimeStart"),createTimeEnd = $("#createTimeEnd");
                         //执行重载
                         table.reload('userList',{
                             page : {
@@ -116,49 +117,97 @@ layui.config({
                                 //重新从第 1 页开始
                             },
                             where : {
-                                //key: {
+                                // key: {
                                 nickname : nickname.val(),
                                 sex : sex.val(),
                                 status : status.val(),
                                 createTimeStart : createTimeStart.val(),
                                 createTimeEnd : createTimeEnd.val()
-                                //}
+                                // }
                             }
                         });
                     }
                 };
 
-            var start = laydate.render({
-                elem : '#createTimeStart',
-                type : 'datetime',
-                max : nowTime,
-                btns : [ 'clear', 'confirm' ],
-                done : function(value, date) {
-                    endMax = end.config.max;
-                    end.config.min = date;
-                    end.config.min.month = date.month - 1;
+                var start = laydate.render({
+                    elem : '#createTimeStart',
+                    type : 'datetime',
+                    max : nowTime,
+                    btns : [ 'clear', 'confirm' ],
+                    done : function(value, date) {
+                        endMax = end.config.max;
+                        end.config.min = date;
+                        end.config.min.month = date.month - 1;
+                    }
+                });
+
+                var end = laydate.render({
+                    elem : '#createTimeEnd',
+                    type : 'datetime',
+                    max : nowTime,
+                    done : function(value, date) {
+                        if ($.trim(value) == '') {
+                            var curDate = new Date();
+                            date = {
+                                'date' : curDate.getDate(),
+                                'month' : curDate.getMonth() + 1,
+                                'year' : curDate.getFullYear()
+                            };
+                        }
+                        start.config.max = date;
+                        start.config.max.month = date.month - 1;
+                    }
+                })
+
+            // 批量导入员工信息
+            upload.render({
+                elem: '.usersAdd_btn'   // 选取元素内容
+                //,multiple: true  // 开启多文件上传
+                ,url: 'http://localhost:8012/mq-sysadmin/sysuser/excel'
+                ,method:'POST'  // 上传内容，默认是 POST HTTP类型。
+                ,accept: 'file' //普通文件      images（图片）、file（所有文件）、video（视频）、audio（音频）。
+                ,exts: 'xls|xlsx'   // 允许上传文件的后缀是 xls 或者是 xlsx 的文件
+                // ,acceptMime: 'image/jpg, image/png'（只显示 jpg 和 png 文件，所以上传的文件是 jpg 和 png 的）
+                // ,drag:false      默认的可以进行拖拽上传值为 true，设置为 false 则不可进行拖拽上传。
+                ,before: function(obj){ // obj 参数包含的信息。
+                    layer.load(); // 打开上传 loading
+                }
+                ,choose: function(obj){     // 选择文件时执行
+                    obj.preview(function(index, file, result){
+                        console.log(index);     // 得到文件索引
+                        console.log(file);      // 得到文件对象
+                        console.log(result);    // 得到文件base64编码，比如图片
+                        // obj.resetFile(index, file, '123.jpg'); // 重命名文件名，layui 2.3.0 开始新增，需要选择的时候进行操作。
+                        // 这里还可以做一些 append 文件列表 DOM 的操作
+                        // obj.upload(index, file); //  对上传失败的单个文件重新上传，一般在某个事件中使用
+                        // delete files[index];     //  删除列表中对应的文件，一般在某个事件中使用
+                    });
+                }
+                ,done: function(res){
+                    console.log(res);
+                    layer.closeAll('loading'); // 关闭 loading
+                    layer.alert("导入成功！");
+                }
+                ,error: function(){
+                    layer.closeAll('loading'); // 关闭 loading
+                    layer.msg('请求异常');
                 }
             });
+            // 文件上传重载的实例，这里还用不到，写下来做一个提示。
+            // 上传文件重载步骤一：创建一个实例
+            var uploadInst = upload.render({    // 命名上传渲染的名称为 uploadInst 。
+                elem: '#id'
+                ,url: '/api/upload/'
+                ,size: 1024*5 //限定大小
+            });
+            //  上传文件重载步骤二：重载该实例，支持重载全部基础参数
+            uploadInst.reload({     // 渲染重载之后的
+                accept: 'images' //只允许上传图片
+                ,acceptMime: 'image/*' //只筛选图片
+                ,size: 1024*2 //限定大小
+            });
 
-            var end = laydate.render({
-                elem : '#createTimeEnd',
-                type : 'datetime',
-                max : nowTime,
-                done : function(value, date) {
-                    if ($.trim(value) == '') {
-                        var curDate = new Date();
-                        date = {
-                            'date' : curDate.getDate(),
-                            'month' : curDate.getMonth() + 1,
-                            'year' : curDate.getFullYear()
-                        };
-                    }
-                    start.config.max = date;
-                    start.config.max.month = date.month - 1;
-                }
-            })
-
-            //加载页面数据
+            // 加载页面数据
             table.render({
                 id : 'userList',
                 elem : '#userList',
@@ -167,7 +216,12 @@ layui.config({
                 ,limits : [ 10, 20, 30, 40 ],
                 cols : [ [ //表头
                     {
-                        type : 'checkbox'
+                        type: 'checkbox',
+                        fixed: 'left'
+                    },
+                    {
+                        type:'numbers',
+                        fixed: 'left'
                     },
                     {
                         field : 'uid',
@@ -212,7 +266,8 @@ layui.config({
                         templet : '<div>{{ formatTime(d.createTime,"yyyy-MM-dd hh:mm:ss")}}</div>'
                     }, {
                         title : '操作',
-                        toolbar : '#barEdit'
+                        toolbar : '#barEdit',
+                        fixed: 'right'
                     } ] ],
                 page : true  // 开启分页
                 ,where: {timestamp: (new Date()).valueOf()}
@@ -220,12 +275,11 @@ layui.config({
 
             //监听工具条
             table.on('tool(userList)', function(obj) {
-                var data = obj.data;
+                var data = obj.data;    // 获取当前操作行的数据
                 if (obj.event === 'del') {
                     layer.confirm('真的删除行么', function(index) {
                         $.ajax({
-                            url : '../user/delUserByUid/'
-                                + data.uid,
+                            url : '../user/delUserByUid/'+ data.uid,
                             type : "get",
                             success : function(d) {
                                 if (d.code == 0) {
@@ -240,12 +294,11 @@ layui.config({
                         layer.close(index);
                     });
                 } else if (obj.event === 'edit') {
-                    layer.open({
+                    layer.open({    // 打开一个界面 ，下边的地址报错，没有通过 Restulful 的方式获取参数。所以要修改这里，增加内容。
                         type : 2,
                         title : "编辑用户",
-                        area : [ '400px', '500px' ],
-                        content : "../user/editUser/"
-                            + data.uid //这里content是一个普通的String
+                        area : [ '500px', '500px' ],
+                        content : "../user/editUser/"+ data.uid // 这里content是一个普通的String
                     })
                 }
             });

@@ -7,6 +7,10 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Properties;
 
+/**
+ * 登录界面的验证码配置信息
+ *   这里是 Java 配置方式，XML 配置方式可以将配置信息配置在 WEB,XML 中。
+ */
 @Configuration
 public class KaptchaConfig {
 

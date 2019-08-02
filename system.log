@@ -1,0 +1,864 @@
+2019-07-31 14:54:51.178  INFO 396 --- [restartedMain] cn.chao.maven.MavenApplication           : Starting MavenApplication on DESKTOP-V6OKFCO with PID 396 (C:\Users\RebortChao\WorkPaces\IdeaProjects\test-maven\target\classes started by RebortChao in C:\Users\RebortChao\WorkPaces\IdeaProjects\test-maven)
+2019-07-31 14:54:51.185 DEBUG 396 --- [restartedMain] cn.chao.maven.MavenApplication           : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 14:54:51.189  INFO 396 --- [restartedMain] cn.chao.maven.MavenApplication           : No active profile set, falling back to default profiles: default
+2019-07-31 14:54:51.433  INFO 396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 14:54:51.436  INFO 396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 14:54:54.872  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-31 14:54:54.873  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-31 14:54:55.125  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 228ms. Found 1 repository interfaces.
+2019-07-31 14:54:55.161  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-31 14:54:55.165  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-31 14:54:55.236  INFO 396 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.chao.maven.jpaentity.UsersRepository.
+2019-07-31 14:54:55.237  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
+2019-07-31 14:54:56.047  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [cn.chao.maven.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$8a10001a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:56.886  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:57.087  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:57.111  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.chao.maven.config.WebConfig$$EnhancerBySpringCGLIB$$d3614a42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:57.193  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'pageHelper' of type [com.github.pagehelper.PageHelper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:57.215  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b1a8d488] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:57.234  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceProperties' of type [cn.chao.maven.config.DataSourceProperties$$EnhancerBySpringCGLIB$$20a892c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:57.419  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.696  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.711  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.714  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminEntityMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.719  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminEntityMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.792  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminMenusMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.798  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminMenusMapper' of type [com.sun.proxy.$Proxy77] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.800  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myShiroRealm' of type [cn.chao.maven.shiro.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:58.814  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:59.090  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:54:59.408  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ed48358] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 14:55:02.584  INFO 396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 14:55:02.862  INFO 396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 14:55:02.864  INFO 396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 14:55:03.382  INFO 396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 14:55:03.383  INFO 396 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11945 ms
+2019-07-31 14:55:05.528  INFO 396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-31 14:55:05.681  INFO 396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-31 14:55:05.684  INFO 396 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-31 14:55:06.046  INFO 396 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-31 14:55:06.693  INFO 396 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-31 14:55:07.063  INFO 396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-31 14:55:08.823  INFO 396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-31 14:55:11.286  INFO 396 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-31 14:55:11.723  INFO 396 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-31 14:55:12.129  INFO 396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 14:55:12.433  WARN 396 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-31 14:55:16.388  INFO 396 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-07-31 14:55:17.105  INFO 396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-31 14:55:17.149  INFO 396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-31 14:55:17.231  INFO 396 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-31 14:55:18.066  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingGET_1
+2019-07-31 14:55:18.068  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingHEAD_1
+2019-07-31 14:55:18.069  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingPOST_1
+2019-07-31 14:55:18.070  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingPUT_1
+2019-07-31 14:55:18.071  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingPATCH_1
+2019-07-31 14:55:18.072  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingDELETE_1
+2019-07-31 14:55:18.077  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingOPTIONS_1
+2019-07-31 14:55:18.080  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingTRACE_1
+2019-07-31 14:55:18.373  INFO 396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 14:55:18.379  INFO 396 --- [restartedMain] cn.chao.maven.MavenApplication           : Started MavenApplication in 28.718 seconds (JVM running for 31.941)
+2019-07-31 14:55:19.126  INFO 396 --- [RMI TCP Connection(5)-192.168.31.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-31 14:55:19.126  INFO 396 --- [RMI TCP Connection(5)-192.168.31.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-31 14:55:19.168  INFO 396 --- [RMI TCP Connection(5)-192.168.31.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 41 ms
+2019-07-31 14:55:19.984  INFO 396 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-31 14:55:19.994  INFO 396 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-31 14:56:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 14:57:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 14:58:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 14:59:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:00:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每小时执行一次的定时任务。
+2019-07-31 15:00:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:01:40.532  INFO 396 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1564540352; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1564545827] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-07-31 15:01:48.824 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.m.A.selectByExample                : ==>  Preparing: select id, username, password, salt, fullname, e_mail, sex, birthday, address, phone, role_id from tb_admin WHERE ( username = ? ) 
+2019-07-31 15:01:48.916 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.m.A.selectByExample                : ==> Parameters: admin(String)
+2019-07-31 15:01:48.951 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.m.A.selectByExample                : <==      Total: 1
+2019-07-31 15:01:49.472 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.R.selectByExample                : ==>  Preparing: select menu_id, role_id from tb_roles_menus WHERE ( role_id = ? ) 
+2019-07-31 15:01:49.479 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.R.selectByExample                : ==> Parameters: 1(Long)
+2019-07-31 15:01:49.516 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.R.selectByExample                : <==      Total: 41
+2019-07-31 15:01:49.517 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:49.532 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:49.557 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:49.932 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 15:01:49.934 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : ==> Parameters: 0(String)
+2019-07-31 15:01:49.940 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : <==      Total: 1
+2019-07-31 15:01:49.944 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 15:01:49.945 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : ==> Parameters: 1(String)
+2019-07-31 15:01:49.951 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : <==      Total: 5
+2019-07-31 15:01:49.953 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 15:01:49.954 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : ==> Parameters: 2(String)
+2019-07-31 15:01:49.958 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByExample                : <==      Total: 1
+2019-07-31 15:01:50.102 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users 
+2019-07-31 15:01:50.103 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.U.selectByExample                : ==> Parameters: 
+2019-07-31 15:01:50.111 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.U.selectByExample                : <==      Total: 7
+2019-07-31 15:01:50.131 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.MainMapper.selUsersToday    : ==>  Preparing: select * from tb_users where to_days(create_time) = to_days(now()); 
+2019-07-31 15:01:50.136 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.MainMapper.selUsersToday    : ==> Parameters: 
+2019-07-31 15:01:50.193 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.MainMapper.selUsersToday    : <==      Total: 0
+2019-07-31 15:01:50.207 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.MainMapper.selUsersYearWeek      : ==>  Preparing: SELECT * FROM tb_users WHERE YEARWEEK(date_format(create_time,'%Y-%m-%d')) = YEARWEEK(now()); 
+2019-07-31 15:01:50.213 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.MainMapper.selUsersYearWeek      : ==> Parameters: 
+2019-07-31 15:01:50.240 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.MainMapper.selUsersYearWeek      : <==      Total: 0
+2019-07-31 15:01:50.251 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYesterday     : ==>  Preparing: SELECT * FROM tb_users WHERE TO_DAYS( NOW( ) ) - TO_DAYS( create_time)= 1 
+2019-07-31 15:01:50.252 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYesterday     : ==> Parameters: 
+2019-07-31 15:01:50.257 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYesterday     : <==      Total: 0
+2019-07-31 15:01:50.266 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.MainMapper.selUsersMonth    : ==>  Preparing: SELECT * FROM tb_users WHERE DATE_FORMAT( create_time, '%Y%m' ) = DATE_FORMAT( CURDATE( ) , '%Y%m' ) 
+2019-07-31 15:01:50.268 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.MainMapper.selUsersMonth    : ==> Parameters: 
+2019-07-31 15:01:50.271 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.MainMapper.selUsersMonth    : <==      Total: 0
+2019-07-31 15:01:55.857 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:55.859 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:55.870 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:55.931 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:55.932 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:55.942 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:59.637 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:59.638 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:59.651 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:59.654 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:59.655 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:59.664 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:59.699 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:59.700 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:59.714 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:59.728 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:59.729 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:59.737 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:59.959 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:59.960 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:59.966 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:01:59.968 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 15:01:59.971 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 15:01:59.987 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 15:02:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:02:00.096 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_users 
+2019-07-31 15:02:00.097 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 15:02:00.108 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 15:02:00.113 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users order by create_time DESC limit ?,? 
+2019-07-31 15:02:00.117 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 15:02:00.127 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample                : <==      Total: 7
+2019-07-31 15:03:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:04:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:05:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:06:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:07:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:08:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:09:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:10:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:11:00.021 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:12:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:13:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:14:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:15:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:16:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:17:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:18:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:19:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:20:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:21:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:22:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:23:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:24:00.025 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:25:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:26:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:27:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:28:00.026 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:29:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:30:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:31:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:32:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:33:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:34:00.015 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:35:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:36:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:37:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:38:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:39:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:40:00.023 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:41:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:42:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:43:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:44:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:45:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:46:00.011 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:47:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:48:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:49:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:50:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:51:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:52:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:53:00.022 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:54:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:55:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:56:00.025 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:57:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:58:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 15:59:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:00:00.013 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每小时执行一次的定时任务。
+2019-07-31 16:00:00.014 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:01:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:02:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:03:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:04:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:05:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:06:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:07:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:08:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:09:00.011 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:10:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:11:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:12:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:13:00.011 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:14:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:15:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:16:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:17:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:18:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:19:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:20:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:21:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:22:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:23:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:24:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:25:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:25:22.086  INFO 396 --- [Thread-42] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-07-31 16:25:22.103  INFO 396 --- [Thread-42] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-31 16:25:23.306  INFO 396 --- [Thread-42] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2019-07-31 16:25:23.340  INFO 396 --- [Thread-42] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-31 16:25:24.767  INFO 396 --- [restartedMain] cn.chao.maven.MavenApplication           : Starting MavenApplication on DESKTOP-V6OKFCO with PID 396 (C:\Users\RebortChao\WorkPaces\IdeaProjects\test-maven\target\classes started by RebortChao in C:\Users\RebortChao\WorkPaces\IdeaProjects\test-maven)
+2019-07-31 16:25:24.768 DEBUG 396 --- [restartedMain] cn.chao.maven.MavenApplication           : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:25:24.768  INFO 396 --- [restartedMain] cn.chao.maven.MavenApplication           : No active profile set, falling back to default profiles: default
+2019-07-31 16:25:27.482  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-31 16:25:27.484  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-31 16:25:27.968  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 484ms. Found 1 repository interfaces.
+2019-07-31 16:25:27.977  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-31 16:25:27.977  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-31 16:25:28.088  INFO 396 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.chao.maven.jpaentity.UsersRepository.
+2019-07-31 16:25:28.088  INFO 396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 0 repository interfaces.
+2019-07-31 16:25:28.552  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [cn.chao.maven.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$8a10001a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.583  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.616  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.621  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.chao.maven.config.WebConfig$$EnhancerBySpringCGLIB$$d3614a42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.627  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'pageHelper' of type [com.github.pagehelper.PageHelper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.635  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b1a8d488] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.644  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceProperties' of type [cn.chao.maven.config.DataSourceProperties$$EnhancerBySpringCGLIB$$20a892c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:28.653  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.049  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.055  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.057  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminEntityMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.059  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminEntityMapper' of type [com.sun.proxy.$Proxy186] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.071  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminMenusMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.072  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminMenusMapper' of type [com.sun.proxy.$Proxy187] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.077  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myShiroRealm' of type [cn.chao.maven.shiro.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.080  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.101  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.132  INFO 396 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ed48358] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-31 16:25:29.845  INFO 396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:25:29.852  INFO 396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:25:29.852  INFO 396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:25:29.918  INFO 396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:25:29.919  INFO 396 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5144 ms
+2019-07-31 16:25:31.074  INFO 396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-31 16:25:31.300  INFO 396 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-07-31 16:25:31.642  INFO 396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-31 16:25:32.032  INFO 396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-31 16:25:33.427  INFO 396 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-31 16:25:34.232  INFO 396 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-31 16:25:34.611  INFO 396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:25:34.856  WARN 396 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-31 16:25:35.626  INFO 396 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-07-31 16:25:36.162  INFO 396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-31 16:25:36.165  INFO 396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-31 16:25:36.180  INFO 396 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-31 16:25:36.868  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingGET_1
+2019-07-31 16:25:36.869  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingHEAD_1
+2019-07-31 16:25:36.870  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingPOST_1
+2019-07-31 16:25:36.871  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingPUT_1
+2019-07-31 16:25:36.873  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingPATCH_1
+2019-07-31 16:25:36.875  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingDELETE_1
+2019-07-31 16:25:36.876  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingOPTIONS_1
+2019-07-31 16:25:36.877  INFO 396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: index_1UsingTRACE_1
+2019-07-31 16:25:37.050  INFO 396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:25:37.052  INFO 396 --- [restartedMain] cn.chao.maven.MavenApplication           : Started MavenApplication in 12.406 seconds (JVM running for 5450.615)
+2019-07-31 16:25:37.064  INFO 396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:26:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:27:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:27:02.462  INFO 396 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-31 16:27:02.464  INFO 396 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-31 16:27:02.533  INFO 396 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 62 ms
+2019-07-31 16:28:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:29:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:30:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:31:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:32:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:33:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:34:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:35:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:36:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:37:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:38:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:39:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:40:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:41:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:41:46.270 DEBUG 396 --- [http-nio-8080-exec-2] c.c.maven.controller.WebMagicController  : 正在执行单页表单爬虫提交……
+2019-07-31 16:41:46.317 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.service.impl.WebMagicServiceImpl   : 正式开始操作爬取内容……
+2019-07-31 16:41:46.320 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.service.impl.WebMagicServiceImpl   : 获取前台输入的	1	个 WEB 地址……
+2019-07-31 16:41:46.321 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.service.impl.WebMagicServiceImpl   : 正在爬取第	1	个WEB地址的内容……
+2019-07-31 16:41:46.577  INFO 396 --- [http-nio-8080-exec-2] us.codecraft.webmagic.Spider             : Spider localhost started!
+2019-07-31 16:41:46.970  INFO 396 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success http://localhost:8012/mq-sysadmin/index.html
+2019-07-31 16:41:46.973 DEBUG 396 --- [pool-2-thread-1] cn.chao.maven.utils.WebMagicUtils        : 执行爬取的处理结果……
+2019-07-31 16:41:47.028 ERROR 396 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='http://localhost:8012/mq-sysadmin/index.html', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.jsoup.select.Selector$SelectorParseException: Could not parse query '/html/body/div[3]/div/ul/li[2]': unexpected token at '/html/body/div[3]/div/ul/li[2]'
+	at org.jsoup.select.QueryParser.findElements(QueryParser.java:204) ~[jsoup-1.10.3.jar:na]
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:59) ~[jsoup-1.10.3.jar:na]
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:42) ~[jsoup-1.10.3.jar:na]
+	at org.jsoup.select.Selector.<init>(Selector.java:86) ~[jsoup-1.10.3.jar:na]
+	at org.jsoup.select.Selector.select(Selector.java:108) ~[jsoup-1.10.3.jar:na]
+	at org.jsoup.nodes.Element.select(Element.java:322) ~[jsoup-1.10.3.jar:na]
+	at us.codecraft.webmagic.selector.CssSelector.selectElements(CssSelector.java:93) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.selector.HtmlNode.selectElements(HtmlNode.java:71) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.selector.HtmlNode.$(HtmlNode.java:110) ~[webmagic-core-0.7.3.jar:na]
+	at cn.chao.maven.utils.WebMagicUtils.process(WebMagicUtils.java:41) ~[classes/:na]
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.7.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2019-07-31 16:42:00.015 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:42:17.032  INFO 396 --- [http-nio-8080-exec-2] us.codecraft.webmagic.Spider             : Spider localhost closed! 1 pages downloaded.
+2019-07-31 16:42:17.050 DEBUG 396 --- [http-nio-8080-exec-2] c.c.maven.controller.WebMagicController  : 爬取内容失败，正在返回……
+2019-07-31 16:42:53.004 DEBUG 396 --- [http-nio-8080-exec-7] c.c.maven.controller.WebMagicController  : 正在执行单页表单爬虫提交……
+2019-07-31 16:42:53.005 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.service.impl.WebMagicServiceImpl   : 正式开始操作爬取内容……
+2019-07-31 16:42:53.006 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.service.impl.WebMagicServiceImpl   : 获取前台输入的	1	个 WEB 地址……
+2019-07-31 16:42:53.006 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.service.impl.WebMagicServiceImpl   : 正在爬取第	1	个WEB地址的内容……
+2019-07-31 16:42:53.007  INFO 396 --- [http-nio-8080-exec-7] us.codecraft.webmagic.Spider             : Spider localhost started!
+2019-07-31 16:42:53.024  INFO 396 --- [pool-3-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success http://localhost:8012/mq-sysadmin/index.html
+2019-07-31 16:42:53.025 DEBUG 396 --- [pool-3-thread-1] cn.chao.maven.utils.WebMagicUtils        : 执行爬取的处理结果……
+2019-07-31 16:42:53.061 ERROR 396 --- [pool-3-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='http://localhost:8012/mq-sysadmin/index.html', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: null
+	at cn.chao.maven.utils.WebMagicMapPipeline.process(WebMagicMapPipeline.java:23) ~[classes/:na]
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.7.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2019-07-31 16:42:53.061  INFO 396 --- [http-nio-8080-exec-7] us.codecraft.webmagic.Spider             : Spider localhost closed! 1 pages downloaded.
+2019-07-31 16:42:53.063 DEBUG 396 --- [http-nio-8080-exec-7] c.c.maven.controller.WebMagicController  : 爬取内容失败，正在返回……
+2019-07-31 16:43:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:44:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:45:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:46:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:47:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:48:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:48:20.884 DEBUG 396 --- [http-nio-8080-exec-9] c.c.maven.controller.WebMagicController  : 正在执行单页表单爬虫提交……
+2019-07-31 16:48:20.893 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.service.impl.WebMagicServiceImpl   : 正式开始操作爬取内容……
+2019-07-31 16:48:20.894 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.service.impl.WebMagicServiceImpl   : 获取前台输入的	1	个 WEB 地址……
+2019-07-31 16:48:20.894 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.service.impl.WebMagicServiceImpl   : 正在爬取第	1	个WEB地址的内容……
+2019-07-31 16:48:20.894  INFO 396 --- [http-nio-8080-exec-9] us.codecraft.webmagic.Spider             : Spider localhost started!
+2019-07-31 16:48:20.907  INFO 396 --- [pool-4-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success http://localhost:8012/mq-sysadmin/index.html
+2019-07-31 16:48:20.908 DEBUG 396 --- [pool-4-thread-1] cn.chao.maven.utils.WebMagicUtils        : 执行爬取的处理结果……
+2019-07-31 16:48:20.915 ERROR 396 --- [pool-4-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='http://localhost:8012/mq-sysadmin/index.html', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: null
+	at cn.chao.maven.utils.WebMagicMapPipeline.process(WebMagicMapPipeline.java:23) ~[classes/:na]
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320) ~[webmagic-core-0.7.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.7.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2019-07-31 16:48:20.916  INFO 396 --- [http-nio-8080-exec-9] us.codecraft.webmagic.Spider             : Spider localhost closed! 1 pages downloaded.
+2019-07-31 16:48:20.918 DEBUG 396 --- [http-nio-8080-exec-9] c.c.maven.controller.WebMagicController  : 爬取内容失败，正在返回……
+2019-07-31 16:49:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:49:49.863 DEBUG 396 --- [http-nio-8080-exec-10] c.c.maven.controller.WebMagicController  : 正在执行单页表单爬虫提交……
+2019-07-31 16:49:49.873 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.service.impl.WebMagicServiceImpl   : 正式开始操作爬取内容……
+2019-07-31 16:49:49.873 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.service.impl.WebMagicServiceImpl   : 获取前台输入的	1	个 WEB 地址……
+2019-07-31 16:49:49.873 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.service.impl.WebMagicServiceImpl   : 正在爬取第	1	个WEB地址的内容……
+2019-07-31 16:49:49.874  INFO 396 --- [http-nio-8080-exec-10] us.codecraft.webmagic.Spider             : Spider localhost started!
+2019-07-31 16:49:49.889  INFO 396 --- [pool-5-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success http://localhost:8012/mq-sysadmin/index.html
+2019-07-31 16:49:49.890 DEBUG 396 --- [pool-5-thread-1] cn.chao.maven.utils.WebMagicUtils        : 执行爬取的处理结果……
+2019-07-31 16:49:54.910  INFO 396 --- [http-nio-8080-exec-10] us.codecraft.webmagic.Spider             : Spider localhost closed! 1 pages downloaded.
+2019-07-31 16:49:54.914 DEBUG 396 --- [http-nio-8080-exec-10] c.c.maven.controller.WebMagicController  : 爬取内容成功，正在返回……
+2019-07-31 16:50:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:51:00.081 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:52:00.030 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:53:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:54:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:55:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:56:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:57:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:58:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 16:59:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:00:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每小时执行一次的定时任务。
+2019-07-31 17:00:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:01:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:02:00.018 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:03:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:04:00.037 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:05:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:06:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:07:00.029 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:08:00.015 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:09:00.015 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:10:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:11:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:12:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:13:00.155 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:14:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:15:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:16:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:17:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:18:00.838 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:19:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:20:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:21:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:22:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:23:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:24:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:25:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:26:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:27:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:28:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:29:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:29:11.039 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.A.selectByExample                : ==>  Preparing: select id, username, password, salt, fullname, e_mail, sex, birthday, address, phone, role_id from tb_admin WHERE ( username = ? ) 
+2019-07-31 17:29:11.050 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.A.selectByExample                : ==> Parameters: admin(String)
+2019-07-31 17:29:11.063 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.A.selectByExample                : <==      Total: 1
+2019-07-31 17:29:11.471 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:11.476 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:11.518 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:11.528 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:11.529 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:11.536 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:11.538 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.R.selectByExample                : ==>  Preparing: select menu_id, role_id from tb_roles_menus WHERE ( role_id = ? ) 
+2019-07-31 17:29:11.540 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.R.selectByExample                : ==> Parameters: 1(Long)
+2019-07-31 17:29:11.562 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:11.566 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:11.568 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.R.selectByExample                : <==      Total: 41
+2019-07-31 17:29:11.569 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:11.570 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:11.571 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:11.573 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:11.575 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:11.580 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:11.581 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:11.938 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 17:29:11.941 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==> Parameters: 0(String)
+2019-07-31 17:29:11.952 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : <==      Total: 1
+2019-07-31 17:29:11.953 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 17:29:11.954 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==> Parameters: 1(String)
+2019-07-31 17:29:11.963 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : <==      Total: 5
+2019-07-31 17:29:11.965 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 17:29:11.966 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==> Parameters: 2(String)
+2019-07-31 17:29:11.968 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : <==      Total: 1
+2019-07-31 17:29:12.113 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users 
+2019-07-31 17:29:12.114 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample                : ==> Parameters: 
+2019-07-31 17:29:12.118 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByExample                : <==      Total: 7
+2019-07-31 17:29:12.142 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.MainMapper.selUsersToday    : ==>  Preparing: select * from tb_users where to_days(create_time) = to_days(now()); 
+2019-07-31 17:29:12.144 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.MainMapper.selUsersToday    : ==> Parameters: 
+2019-07-31 17:29:12.181 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.MainMapper.selUsersToday    : <==      Total: 0
+2019-07-31 17:29:12.196 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.MainMapper.selUsersYearWeek      : ==>  Preparing: SELECT * FROM tb_users WHERE YEARWEEK(date_format(create_time,'%Y-%m-%d')) = YEARWEEK(now()); 
+2019-07-31 17:29:12.198 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.MainMapper.selUsersYearWeek      : ==> Parameters: 
+2019-07-31 17:29:12.220 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.MainMapper.selUsersYearWeek      : <==      Total: 0
+2019-07-31 17:29:12.234 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYesterday     : ==>  Preparing: SELECT * FROM tb_users WHERE TO_DAYS( NOW( ) ) - TO_DAYS( create_time)= 1 
+2019-07-31 17:29:12.235 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYesterday     : ==> Parameters: 
+2019-07-31 17:29:12.239 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYesterday     : <==      Total: 0
+2019-07-31 17:29:12.251 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.MainMapper.selUsersMonth    : ==>  Preparing: SELECT * FROM tb_users WHERE DATE_FORMAT( create_time, '%Y%m' ) = DATE_FORMAT( CURDATE( ) , '%Y%m' ) 
+2019-07-31 17:29:12.252 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.MainMapper.selUsersMonth    : ==> Parameters: 
+2019-07-31 17:29:12.255 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.MainMapper.selUsersMonth    : <==      Total: 0
+2019-07-31 17:29:12.484 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:12.485 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:12.491 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:12.496 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:29:12.497 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:29:12.502 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:29:12.508 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_users 
+2019-07-31 17:29:12.511 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 17:29:12.513 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 17:29:12.516 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users order by create_time DESC limit ?,? 
+2019-07-31 17:29:12.518 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 17:29:12.526 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByExample                : <==      Total: 7
+2019-07-31 17:30:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:31:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:32:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:33:00.018 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:34:00.067 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:35:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:36:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:37:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:38:00.019 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:39:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:40:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:41:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:42:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:43:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:44:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:45:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:45:09.434 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:09.445 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:09.460 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:09.468 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:09.469 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:09.474 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:09.522 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:09.524 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:09.532 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:09.537 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:09.539 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:09.544 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:09.789 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:09.789 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:09.794 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:09.796 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:09.797 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:09.801 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:09.849 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.R.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_roles 
+2019-07-31 17:45:09.856 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.R.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 17:45:09.864 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.R.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 17:45:09.865 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.R.selectByExample                : ==>  Preparing: select role_id, role_name, role_remark from tb_roles limit ?,? 
+2019-07-31 17:45:09.867 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.R.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 17:45:09.869 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.R.selectByExample                : <==      Total: 4
+2019-07-31 17:45:18.704 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:18.707 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:18.711 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:18.713 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:18.713 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:18.717 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:18.723 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:18.723 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:18.727 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:18.729 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:18.730 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:18.735 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:18.828 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:18.828 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:18.833 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:18.835 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 17:45:18.836 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 17:45:18.840 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 17:45:18.844 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_roles 
+2019-07-31 17:45:18.845 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 17:45:18.848 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 17:45:18.851 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample                : ==>  Preparing: select role_id, role_name, role_remark from tb_roles limit ?,? 
+2019-07-31 17:45:18.852 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 17:45:18.854 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample                : <==      Total: 4
+2019-07-31 17:45:31.829 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.A.selectByPrimaryKey             : ==>  Preparing: select id, username, password, salt, fullname, e_mail, sex, birthday, address, phone, role_id from tb_admin where id = ? 
+2019-07-31 17:45:31.831 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.A.selectByPrimaryKey             : ==> Parameters: 1(Long)
+2019-07-31 17:45:31.838 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.A.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 17:45:31.844 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.R.selectByExample                : ==>  Preparing: select role_id, role_name, role_remark from tb_roles 
+2019-07-31 17:45:31.846 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.R.selectByExample                : ==> Parameters: 
+2019-07-31 17:45:31.847 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.R.selectByExample                : <==      Total: 4
+2019-07-31 17:46:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:47:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:48:00.026 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:49:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:50:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:51:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:52:00.021 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:53:00.015 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:54:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:55:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:56:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:57:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:58:00.023 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 17:59:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:00:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每小时执行一次的定时任务。
+2019-07-31 18:00:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:01:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:02:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:03:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:04:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:05:00.021 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:06:00.135 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:07:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:08:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:09:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:10:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:11:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:12:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:13:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:14:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:15:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:16:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:17:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:18:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:19:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:20:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:21:00.011 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:22:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:23:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:24:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:25:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:26:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:27:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:28:00.022 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:29:00.029 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:30:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:31:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:32:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:33:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:34:00.016 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:35:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:36:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:37:00.018 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:38:00.016 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:39:00.011 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:40:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:41:00.013 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:42:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:43:00.013 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:44:00.012 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:45:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:46:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:47:00.013 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:48:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:49:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:50:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:51:00.014 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:52:00.009 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:53:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:54:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:55:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:56:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:57:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:58:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 18:59:00.017 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:00:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:00:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每小时执行一次的定时任务。
+2019-07-31 19:01:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:02:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:03:00.010 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:04:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:05:00.003 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:06:00.037 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:07:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:08:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:09:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:10:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:10:12.628 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.A.selectByExample                : ==>  Preparing: select id, username, password, salt, fullname, e_mail, sex, birthday, address, phone, role_id from tb_admin WHERE ( username = ? ) 
+2019-07-31 19:10:12.631 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.A.selectByExample                : ==> Parameters: admin(String)
+2019-07-31 19:10:12.640 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.A.selectByExample                : <==      Total: 1
+2019-07-31 19:10:13.063 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.R.selectByExample                : ==>  Preparing: select menu_id, role_id from tb_roles_menus WHERE ( role_id = ? ) 
+2019-07-31 19:10:13.064 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.R.selectByExample                : ==> Parameters: 1(Long)
+2019-07-31 19:10:13.071 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.R.selectByExample                : <==      Total: 41
+2019-07-31 19:10:13.073 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:13.074 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:13.081 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:13.156 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 19:10:13.156 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : ==> Parameters: 0(String)
+2019-07-31 19:10:13.161 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : <==      Total: 1
+2019-07-31 19:10:13.163 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 19:10:13.164 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : ==> Parameters: 1(String)
+2019-07-31 19:10:13.168 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : <==      Total: 5
+2019-07-31 19:10:13.171 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( sex = ? ) 
+2019-07-31 19:10:13.172 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : ==> Parameters: 2(String)
+2019-07-31 19:10:13.174 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByExample                : <==      Total: 1
+2019-07-31 19:10:13.292 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users 
+2019-07-31 19:10:13.293 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : ==> Parameters: 
+2019-07-31 19:10:13.296 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.U.selectByExample                : <==      Total: 7
+2019-07-31 19:10:13.319 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.MainMapper.selUsersToday    : ==>  Preparing: select * from tb_users where to_days(create_time) = to_days(now()); 
+2019-07-31 19:10:13.320 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.MainMapper.selUsersToday    : ==> Parameters: 
+2019-07-31 19:10:13.321 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.MainMapper.selUsersToday    : <==      Total: 0
+2019-07-31 19:10:13.334 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYearWeek      : ==>  Preparing: SELECT * FROM tb_users WHERE YEARWEEK(date_format(create_time,'%Y-%m-%d')) = YEARWEEK(now()); 
+2019-07-31 19:10:13.335 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYearWeek      : ==> Parameters: 
+2019-07-31 19:10:13.337 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.m.MainMapper.selUsersYearWeek      : <==      Total: 0
+2019-07-31 19:10:13.346 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.m.MainMapper.selUsersYesterday     : ==>  Preparing: SELECT * FROM tb_users WHERE TO_DAYS( NOW( ) ) - TO_DAYS( create_time)= 1 
+2019-07-31 19:10:13.353 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.m.MainMapper.selUsersYesterday     : ==> Parameters: 
+2019-07-31 19:10:13.354 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.m.MainMapper.selUsersYesterday     : <==      Total: 0
+2019-07-31 19:10:13.369 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.MainMapper.selUsersMonth    : ==>  Preparing: SELECT * FROM tb_users WHERE DATE_FORMAT( create_time, '%Y%m' ) = DATE_FORMAT( CURDATE( ) , '%Y%m' ) 
+2019-07-31 19:10:13.370 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.MainMapper.selUsersMonth    : ==> Parameters: 
+2019-07-31 19:10:13.371 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.MainMapper.selUsersMonth    : <==      Total: 0
+2019-07-31 19:10:15.225 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:15.226 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:15.230 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:15.232 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:15.233 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:15.237 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:15.245 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:15.246 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:15.250 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:15.252 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:15.253 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:15.257 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:15.464 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:15.465 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:15.470 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:15.472 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:15.473 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:15.477 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:15.479 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.U.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_users 
+2019-07-31 19:10:15.480 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.U.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 19:10:15.481 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.U.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 19:10:15.487 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users order by create_time DESC limit ?,? 
+2019-07-31 19:10:15.489 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.U.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 19:10:15.493 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.U.selectByExample                : <==      Total: 7
+2019-07-31 19:10:42.917 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:42.918 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:42.923 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:42.926 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:42.927 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:42.931 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:45.235 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.U.selectByExample                : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users WHERE ( e_mail = ? ) 
+2019-07-31 19:10:45.239 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.U.selectByExample                : ==> Parameters: (String)
+2019-07-31 19:10:45.242 DEBUG 396 --- [http-nio-8080-exec-9] c.c.m.m.U.selectByExample                : <==      Total: 0
+2019-07-31 19:10:53.609 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:53.610 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:53.615 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:53.618 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:10:53.618 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:10:53.622 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:10:53.624 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByPrimaryKey             : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users where uid = ? 
+2019-07-31 19:10:53.625 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByPrimaryKey             : ==> Parameters: 35(Long)
+2019-07-31 19:10:53.629 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 19:11:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:11:09.199 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:11:09.199 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:11:09.203 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:11:09.206 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:11:09.206 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:11:09.211 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:11:09.212 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByPrimaryKey             : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users where uid = ? 
+2019-07-31 19:11:09.213 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByPrimaryKey             : ==> Parameters: 34(Long)
+2019-07-31 19:11:09.216 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.U.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 19:11:30.986 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:11:30.987 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:11:30.992 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:11:30.995 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:11:30.995 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:11:31.000 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:11:31.002 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByPrimaryKey             : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users where uid = ? 
+2019-07-31 19:11:31.003 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByPrimaryKey             : ==> Parameters: 34(Long)
+2019-07-31 19:11:31.004 DEBUG 396 --- [http-nio-8080-exec-8] c.c.m.m.U.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 19:12:00.014 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:13:00.005 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:14:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:15:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:16:00.001 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:16:23.419 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:16:23.421 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:16:23.426 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:16:23.428 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:16:23.438 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:16:23.442 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:16:23.444 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByPrimaryKey             : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users where uid = ? 
+2019-07-31 19:16:23.445 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByPrimaryKey             : ==> Parameters: 30(Long)
+2019-07-31 19:16:23.447 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.m.U.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 19:17:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:18:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:18:04.864 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:18:04.867 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:18:04.872 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:18:04.874 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:18:04.876 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:18:04.880 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:18:04.881 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByPrimaryKey             : ==>  Preparing: select uid, e_mail, nickname, password, sex, birthday, address, phone, e_code, status, create_time from tb_users where uid = ? 
+2019-07-31 19:18:04.881 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByPrimaryKey             : ==> Parameters: 28(Long)
+2019-07-31 19:18:04.883 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.U.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 19:19:00.008 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:20:00.004 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:21:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:21:02.609 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:02.610 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:02.615 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:02.617 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:02.618 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:02.623 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:02.629 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:02.630 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:02.635 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:02.637 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:02.637 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:02.642 DEBUG 396 --- [http-nio-8080-exec-2] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:02.786 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:02.789 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:02.795 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:02.797 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:02.797 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:02.801 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:02.807 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_roles 
+2019-07-31 19:21:02.807 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 19:21:02.809 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 19:21:02.811 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample                : ==>  Preparing: select role_id, role_name, role_remark from tb_roles limit ?,? 
+2019-07-31 19:21:02.812 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 19:21:02.816 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.m.R.selectByExample                : <==      Total: 4
+2019-07-31 19:21:04.526 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:04.527 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:04.531 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:04.533 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:04.534 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:04.539 DEBUG 396 --- [http-nio-8080-exec-5] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:04.664 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.M.selectByExample                : ==>  Preparing: select menu_id, title, icon, href, perms, spread, parent_id, sorting from tb_menus order by sorting DESC 
+2019-07-31 19:21:04.665 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.M.selectByExample                : ==> Parameters: 
+2019-07-31 19:21:04.671 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.m.M.selectByExample                : <==      Total: 47
+2019-07-31 19:21:04.673 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:04.674 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:04.680 DEBUG 396 --- [http-nio-8080-exec-1] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:07.382 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:07.383 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:07.388 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:07.390 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:07.391 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:07.396 DEBUG 396 --- [http-nio-8080-exec-3] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:07.500 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:07.501 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:07.505 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:07.508 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:07.509 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:07.515 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:07.524 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.A.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM tb_admin 
+2019-07-31 19:21:07.526 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.A.selectByExample_COUNT          : ==> Parameters: 
+2019-07-31 19:21:07.529 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.A.selectByExample_COUNT          : <==      Total: 1
+2019-07-31 19:21:07.531 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.A.selectByExample                : ==>  Preparing: select id, username, password, salt, fullname, e_mail, sex, birthday, address, phone, role_id from tb_admin limit ?,? 
+2019-07-31 19:21:07.532 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.A.selectByExample                : ==> Parameters: 0(Integer), 10(Integer)
+2019-07-31 19:21:07.535 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.A.selectByExample                : <==      Total: 4
+2019-07-31 19:21:07.536 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.R.selectByExample                : ==>  Preparing: select role_id, role_name, role_remark from tb_roles 
+2019-07-31 19:21:07.537 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.R.selectByExample                : ==> Parameters: 
+2019-07-31 19:21:07.540 DEBUG 396 --- [http-nio-8080-exec-4] c.c.m.m.R.selectByExample                : <==      Total: 4
+2019-07-31 19:21:10.647 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:10.649 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:10.654 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:10.656 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:10.658 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:10.663 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:10.666 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.A.selectByPrimaryKey             : ==>  Preparing: select id, username, password, salt, fullname, e_mail, sex, birthday, address, phone, role_id from tb_admin where id = ? 
+2019-07-31 19:21:10.667 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.A.selectByPrimaryKey             : ==> Parameters: 18(Long)
+2019-07-31 19:21:10.668 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.A.selectByPrimaryKey             : <==      Total: 1
+2019-07-31 19:21:10.675 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.R.selectByExample                : ==>  Preparing: select role_id, role_name, role_remark from tb_roles 
+2019-07-31 19:21:10.676 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.R.selectByExample                : ==> Parameters: 
+2019-07-31 19:21:10.678 DEBUG 396 --- [http-nio-8080-exec-10] c.c.m.m.R.selectByExample                : <==      Total: 4
+2019-07-31 19:21:14.743 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:14.744 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:14.749 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:14.751 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:14.752 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:14.756 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:14.760 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:14.760 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:14.765 DEBUG 396 --- [http-nio-8080-exec-6] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:14.907 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:14.907 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:14.911 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:14.913 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==>  Preparing: SELECT m.menu_id as menuId,m.title,m.icon,m.href,m.spread,m.parent_id as parentId,m.perms FROM tb_roles_menus r LEFT JOIN tb_menus m ON r.menu_id = m.menu_id WHERE r.role_id = ? order by sorting desc 
+2019-07-31 19:21:14.914 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : ==> Parameters: 1(Long)
+2019-07-31 19:21:14.918 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.mapper.AdminMenusMapper.getMenus   : <==      Total: 41
+2019-07-31 19:21:14.924 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.M.selectByExample                : ==>  Preparing: select menu_id, title, icon, href, perms, spread, parent_id, sorting from tb_menus order by sorting DESC 
+2019-07-31 19:21:14.925 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.M.selectByExample                : ==> Parameters: 
+2019-07-31 19:21:14.929 DEBUG 396 --- [http-nio-8080-exec-7] c.c.m.m.M.selectByExample                : <==      Total: 47
+2019-07-31 19:22:00.000 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:23:00.007 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:24:00.002 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
+2019-07-31 19:25:00.006 DEBUG 396 --- [scheduling-1] cn.chao.maven.quartz.MethodLogQuartz     : 每分钟执行一次的定时任务。
