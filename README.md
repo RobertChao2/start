@@ -187,11 +187,11 @@ layui.use(['upload','jquery','layer'],function(){
   * 3.1、 contentType：告诉服务器，我要发什么类型的数据给你。
   * 3.2、 dataType：告诉服务器，我要想什么类型的数据，返回给我啥类型，如果没有指定，那么会自动推断是返回 XML，还是JSON，还是script，还是String。
 ## 插件（plugins）的使用
-* 1、Layui 插件。更多内容详见官方文档：https://www.layui.com/doc/
+### 1、Layui 插件。更多内容详见官方文档：https://www.layui.com/doc/
 
-1.1、**表单内容以及动态刷新**
+* 1.1、**表单内容以及动态刷新**
 
-1.1.1、**使用 layui.use 监听 select 事件。**
+* 1.1.1、**使用 layui.use 监听 select 事件。**
 **HTML表单页面：**<select lay-filter="demo" lay-verify="required">   lay-filter 表示监听，lay-verify 表示验证。
 **JavaScript语法：**
 ```javascript
@@ -210,7 +210,7 @@ layui.use(['layer', 'jquery', 'form'], function () {
 });
 ```
 
-1.1.2、**使用 layui.use 监听 radio 事件。**
+* 1.1.2、**使用 layui.use 监听 radio 事件。**
 **HTML表单页面：**
 ```html
 <div class="layui-form-item">       
@@ -235,7 +235,7 @@ form.on("radio(roleType)", function (data) {        //  radio 的设置监听 la
 });
 ```
 
-1.1.3、**只引用 JQuery 的话，监听单选按钮改变事件如下。**
+* 1.1.3、**只引用 JQuery 的话，监听单选按钮改变事件如下。**
 **HTML表单页面：**
 ```html
 <input type="radio" name="sex" checked="checked" value="1">男
@@ -254,7 +254,7 @@ $(document).ready(function() {
 });
 ```
 
-1.1.4、**表格渲染的新写法（table.render）**
+* 1.1.4、**表格渲染的新写法（table.render）**
 - 表格的分页
 
     page: {
@@ -285,7 +285,7 @@ $(document).ready(function() {
         }
     }
 
-1.1.5、**弹出层（layer.open）的使用**
+* 1.1.5、**弹出层（layer.open）的使用**
 
 - 弹出层遮盖住背景
     shadeClose: true, //点击遮罩关闭
@@ -347,11 +347,12 @@ $(document).ready(function() {
 ```
 3. 关闭弹出层之后刷新父页面
 ```javascript
-            window.parent.location.reload();//刷新父页面
-            parent.layer.close(index);//关闭弹出层
+    window.parent.location.reload();    //  刷新父页面
+    parent.layer.close(index);          //  关闭弹出层
+    // 可以在父页面设置 render() 渲染方法，通过 子页面调用父页面的方法 重新渲染父页面。
 ```
 
-* 2、**HTML 中 &nbsp; &ensp; &emsp; &thinsp;等 6 种空白空格的区别。**
+### 2、**HTML 中 &nbsp; &ensp; &emsp; &thinsp;等 6 种空白空格的区别。**
 ```html
 &nbsp; 不换行空格，它是按下 Space 键产生的空格。
 &ensp; 半角空格，占据的宽度正好是 1/2 个中文宽度。
@@ -362,7 +363,7 @@ $(document).ready(function() {
 ```
 **浏览器还会把以下字符当作空白进行解析：空格（`&#x0020;`）、制表位（`&#x0009;`）、换行（`&#x000A;`）和回车（`&#x000D;`）还有（`&#12288;`）**
 
-* 3、**Java 从 request 中获取请求参数。**
+### 3、**Java 从 request 中获取请求参数。**
 ```java
 public class requestControl{
     public static void main(String[] args){
@@ -403,7 +404,7 @@ public class requestControl{
 }
 ```
 
-4. **String 非空、Integer 非空、List 非空、对象 非空**
+### 4. **String 非空、Integer 非空、List 非空、对象 非空**
 ```
 public class notEmpty(){
     public static void main(String[] args){
@@ -419,7 +420,7 @@ public class notEmpty(){
 }
 ```
 
-5. **JQuery 添加元素，详情查看：** https://blog.csdn.net/Roobert_Chao/article/details/88843957
+### 5. **JQuery 添加元素，详情查看：** https://blog.csdn.net/Roobert_Chao/article/details/88843957
 ```html
 5.1、append()    - <在被选元素的结尾插入内容>结尾靠近结束标签</在被选元素的结尾插入内容>
 5.2、prepend()   - <在被选元素的开头插入内容>开头靠近开始标签</在被选元素的开头插入内容>
@@ -427,7 +428,7 @@ public class notEmpty(){
 5.4、before()    - 在开始的位置加入<在被选元素之前插入内容></在被选元素之前插入内容>
 ```
 
-6. **jQuery 的 Ajax 中 get()、post()的跨域方法**
+### 6. **jQuery 的 Ajax 中 get()、post()的跨域方法**
 
 * 6.1、get() 请求中使用 Jsonp
 ```javascript
@@ -473,7 +474,7 @@ $.ajax({
       Access-Control-Max-Age: 1000
 ```
 
-7. JavaScript 中通过 jQuery 设置生成随机字符串。
+### 7. JavaScript 中通过 jQuery 设置生成随机字符串。
 ```javascript
 // 获取长度为len的随机字符串
 var pwdlength = function _getRandomString(len) {
@@ -489,7 +490,7 @@ var pwdlength = function _getRandomString(len) {
 // 这里通过 pwdlength(32) 即可得到返回值内容。 （） JavaScript 中表示执行此方法。
 ```
 
-8. 在 java 中把 double类型 转成 int类型。
+### 8. 在 java 中把 double类型 转成 int类型。
 ```java
 public class doubleSwapInt{
     public static void main(String[] args){
@@ -507,15 +508,18 @@ public class doubleSwapInt{
     }
 }
 ```
+
 ## svn、git 等版本控制
 ### svn 版本控制
 1. 添加【右键项目，选择TortoiseSVN 】-->【选择add选项】
 2. 提交【右键项目文件，选择svn commit】-->【勾选要提交的文件】-->【ok】
 3. 删除【右键，选择SVN管理软件】-->【Repo-brower 版本浏览器】-->【点击右键，选择删除】-->【删除的时候需要提交svn操作日志（无用文件夹删除）。】
+
 ### git 版本控制
 1. Git 命令执行版本控制：https://blog.csdn.net/Roobert_Chao/article/details/86618599
 2. idea 中使用 Git 操作：【VCS】-->【Checkout from Version Control】-->【Git】(项目获得版本控制，执行 git 命令)
-2.1. 下方有版本控制
+#### 2.1. 下方有版本控制
+
 ## 项目中的问题。
 ### 一、编码问题 Code Problem
 1. **Tomcat 的编码**
