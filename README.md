@@ -192,8 +192,12 @@ layui.use(['upload','jquery','layer'],function(){
 * 1.1、**表单内容以及动态刷新**
 
 * 1.1.1、**使用 layui.use 监听 select 事件。**
-**HTML表单页面：**<select lay-filter="demo" lay-verify="required">   lay-filter 表示监听，lay-verify 表示验证。
-**JavaScript语法：**
+
+* **HTML表单页面：**
+    <select lay-filter="demo" lay-verify="required">   lay-filter 表示监听，lay-verify 表示验证。
+
+* **JavaScript语法：**
+
 ```javascript
 layui.use(['layer', 'jquery', 'form'], function () {
     var layer = layui.layer,
@@ -211,7 +215,9 @@ layui.use(['layer', 'jquery', 'form'], function () {
 ```
 
 * 1.1.2、**使用 layui.use 监听 radio 事件。**
-**HTML表单页面：**
+
+* **HTML表单页面：**
+
 ```html
 <div class="layui-form-item">       
     <label class="layui-form-label">角色类型</label>
@@ -221,7 +227,8 @@ layui.use(['layer', 'jquery', 'form'], function () {
     </div>
 </div>
 ```
-**JavaScript语法：**
+* **JavaScript语法：**
+
 ```javascript
 form.on("radio(roleType)", function (data) {        //  radio 的设置监听 lay-filter='roleType'
     var sex = data.value;
@@ -236,12 +243,16 @@ form.on("radio(roleType)", function (data) {        //  radio 的设置监听 la
 ```
 
 * 1.1.3、**只引用 JQuery 的话，监听单选按钮改变事件如下。**
-**HTML表单页面：**
+
+* **HTML表单页面：**
+
 ```html
-<input type="radio" name="sex" checked="checked" value="1">男
-<input type="radio" name="sex" value="2">女
+    <input type="radio" name="sex" checked="checked" value="1">男
+    <input type="radio" name="sex" value="2">女
 ```
-**JavaScript语法：**
+
+* **JavaScript语法：**
+
 ```javascript
 $(document).ready(function() { 
     $('input[type=radio][name=sex]').change(function() {
@@ -255,8 +266,10 @@ $(document).ready(function() {
 ```
 
 * 1.1.4、**表格渲染的新写法（table.render）**
+
 - 表格的分页
 
+```html
     page: {
       layout: ['limit', 'count', 'prev', 'page', 'next', 'skip','refresh'] //自定义分页布局
       //,curr: 5 //设定初始在第 5 页
@@ -264,17 +277,23 @@ $(document).ready(function() {
       ,first: true
       ,last: true
     }
+```
         
 - 表格的高度
 
+```javascript
     height: 'full-100' /* 表格有宽度之后，可设表格的高度最大化当前窗口 */
-    
+```
+  
 - 表格的宽度
-    
-    cellMinWidth:80,
+
+```html
+    cellMinWidth:80 /* 设置每一个元素的最小宽度为 80  */
+```
 
 - 表格的表头中加入 templet 方法函数
 
+```html
     {
         field: 'canshu',
         title: '表头的标题',
@@ -284,6 +303,7 @@ $(document).ready(function() {
           return fangfa(res.canshu)     // 可以通过 res.canshu 取出参数内容。
         }
     }
+```
 
 * 1.1.5、**弹出层（layer.open）的使用**
 
@@ -297,7 +317,8 @@ $(document).ready(function() {
 - 弹出层的按钮 yes(btn1)、btn2、btn3
 - 弹出层成功的回调：
     
-    success: function (layero, index) {
+```html
+    success: function (layero, index) {     /* layer.open 成功后的回调函数 */
         var body = layer.getChildFrame('body', index);
         var iframeWin = window[layero.find('iframe')[0]['name']]; //得到iframe页的窗口对象，执行iframe页的方法：iframeWin.method();
         // console.log(body.html()) //得到iframe页的body内容
@@ -318,7 +339,8 @@ $(document).ready(function() {
     
     parent.layer.close(index); // 执行关闭
     parent.$(".refresh").click();// 通过触发页面局部刷新按钮来刷新父页面更新修改后的表格数据
-    
+ 
+```   
 ##### layer弹出层的关闭问题——在执行完毕后关闭当前弹出层
 1. layer.close(index) - 关闭特定层
 ```javascript
@@ -352,7 +374,7 @@ $(document).ready(function() {
     // 可以在父页面设置 render() 渲染方法，通过 子页面调用父页面的方法 重新渲染父页面。
 ```
 
-### 2、**HTML 中 &nbsp; &ensp; &emsp; &thinsp;等 6 种空白空格的区别。**
+### 2、**HTML 中 `&nbsp; &ensp; &emsp; &thinsp;`等 6 种空白空格的区别。**
 ```html
 &nbsp; 不换行空格，它是按下 Space 键产生的空格。
 &ensp; 半角空格，占据的宽度正好是 1/2 个中文宽度。
@@ -509,6 +531,71 @@ public class doubleSwapInt{
 }
 ```
 
+### 9.**jQuery 中的 $(function(){})、$(document).ready(function(){})**
+> jQuery 的模块可以分为 3 部分：入口模块、底层支持模块和功能模块。
+> 1. $(function(){}) 是 $(document).ready(function(){}) 的简称。
+> > 1. 简单理解是(function($){...})(jQuery)用来定义一些需要预先定义好的函数。
+> > 2. $(function(){ })则是用来在 DOM 加载完成之后运行\执行那些预行定义好的函数。
+> 2. (function(arg){})表示一个匿名函数。(function(arg){...})(param) 这就相当于定义了一个参数为arg的匿名函数，并且将param作为参数来调用这个匿名函数
+> > (function($){...})(jQuery)  只在形参使用$，是为了不与其他库冲突，所以实参用jQuery。
+> 3. function(arg){...}定义了一个参数为arg的匿名函数，然后使用(function(arg){...})(param)来调用这个匿名函数。其中param是传入这个匿名函数的参数。
+
+```text
+var fn = function($){....};
+fn(jQuery);
+<===>
+(function($){...})(jQuery) 
+```
+#### jQuery.extends(); 函数用于将一个或多个对象的内容合并到目标对象。
+1. 如果只为 $.extend() 指定了一个参数，则意味着参数 target 被省略。此时，target 就是 jQuery 对象本身。通过这种方式，我们可以为全局对象 jQuery 添加新的函数。
+2. 如果多个对象具有相同的属性，则后者会覆盖前者的属性值。
+```text
+$.extend( [deep ], target, object1 [, objectN ] )
+// 1. deep	可选。 Boolean类型 指示是否深度合并对象，默认为false。如果该值为true，且多个对象的某个同名属性也都是对象，则该"属性对象"的属性也将进行合并。
+// 2. target	Object类型 目标对象，其他对象的成员属性将被附加到该对象上。
+// 3. object1	可选。 Object类型 第一个被合并的对象。
+// 4. objectN	可选。 Object类型 第N个被合并的对象。
+```
+#### jQuery 中的 $.fn 的用法
+1. $.fn.method()=function(){} 的调用把方法扩展到了对象的 prototype 上，所以实例化一个 jQuery 对象的时候，它就具有了这些方法。
+```text
+$.fn.blueBorder = function(){
+ this.each(function(){
+  $(this).css("border","solid blue 2px");
+ });
+ return this;
+};
+$.fn.blueText = function(){
+ this.each(function(){
+  $(this).css("color","blue");
+ });
+ return this;
+};
+```
+由于有 return this,所以支持链式，在调用的时候可以这样写：$('.blue').blueBorder().blueText();
+2. $.fn.extend({}) 是对$.fn.method()=function(){}的扩展，它可以定义多个方法：
+```text
+$.fn.extend({
+    a: function() { },
+    b: function() { }
+});
+
+等效于(<===>)：
+
+$.fn.a = function() { };
+$.fn.b = function() { };
+```
+3. $.extend({}) ，为 jQuery 类添加静态方法（jQuery 添加静态的方法）。
+```text
+$.extend({
+    abc: function(){
+        alert('abc');
+    }
+});
+```
+使用方式： $.abc()。
+4. 
+
 ## svn、git 等版本控制
 ### svn 版本控制
 1. 添加【右键项目，选择TortoiseSVN 】-->【选择add选项】
@@ -535,6 +622,67 @@ spring.http.encoding.enabled=true
 ```
 ### 二、Dao 层关联数据查询 JOIN ON / JOIN ，左连接，根据左边的值为准。
 1. SELECT * FROM test.contract a JOIN test.customer b ON a.Num = b.Num2 JOIN test.customer3 c ON a.num = c.num3;
-    **简述分析：** 查询 test 数据库中 contract 表的所有内容，并将表 contract 取名为 a ，但是需要加入 customer 表的所有内容，并将表 customer 取名为 b，
-要求 a 表的 Num 和 b 表的 Num2 相等，同时又需要加入 customer3 表中的所有内容，并将 customer3 表命名为 c ，要求 a 的 num 和 c 的 num3 相等。 
-    **多表连接表的连接顺序从左往右**
+    
+ ```html
+    1.1、简述分析：查询 test 数据库中 contract 表的所有内容，并将表 contract 取名为 a ，但是需要加入 customer 表的所有内容，并将表 customer 取名为 b，
+        要求 a 表的 Num 和 b 表的 Num2 相等，同时又需要加入 customer3 表中的所有内容，并将 customer3 表命名为 c ，要求 a 的 num 和 c 的 num3 相等。 
+    1.2、多表连接表的连接顺序从左往右
+ ```
+ 
+2. MyBatis 现在一改之前的做法，不在使用 逆向工程，生成快捷的 mapper 与 dao 。`
+##### dao 层传递参数的问题。
+```text
+1、可以通过仿照之前使用逆向工程生成的 mapper 与 dao 层直接模仿者去写。 
+    有一点很是重要 @Param 的参数十分重要。即便是 通过逆向工程生成的代码中，也是有很大比重的。
+2、返回值的内容设置。①、resultType ②、resultMap 的使用也是非常重要的。
+3、dao 层传递参数接收到 xml 文件中，执行对应的 sql 语句。
+    我们可以从逆向工程的配置文件中读出内容看出：大多数方法的参数是一个参数并且不是简单的基本类型就是就是自定义的实体类。
+    那么 ? 多个参数，传递不同的类型要如何去操作呢。
+    其实，在逆向工程当中， 更新方法的参数就是两个参数的。而且参数类型也是不尽相同的，我们可以参照这个方法“举一反三”。
+    java 接口（interface）文件 ：int updateByExample(@Param("record") LogEntity record, @Param("example") LogEntityExample example);
+    xml 映射（mapper）文件：
+          <update id="updateByExample" parameterType="map">
+            update tb_log           更新表
+            set id = #{record.id,jdbcType=BIGINT},      通过实体类取出参数 ，通过 jdbcType 设置参数类型，对应的数据库中额类型
+              username = #{record.username,jdbcType=VARCHAR},
+              operation = #{record.operation,jdbcType=VARCHAR},
+              method = #{record.method,jdbcType=VARCHAR},
+              params = #{record.params,jdbcType=VARCHAR},
+              ip = #{record.ip,jdbcType=VARCHAR},
+              create_time = #{record.createTime,jdbcType=TIMESTAMP}
+            <if test="_parameter != null">
+              <include refid="Update_By_Example_Where_Clause" />    // 这个位置引入了 sql 片段，下面是这个 sql 片段的全部内容。
+            </if>
+          </update>
+                        // 具体的使用方法，还需要结合 xxxExample 的类，我觉的通过 update 更新的这个方法能够说明如何使用参数了。
+          <sql id="Update_By_Example_Where_Clause">
+              <where>
+                <foreach collection="example.oredCriteria" item="criteria" separator="or">  // foreach 循环语句
+                  <if test="criteria.valid">    
+                    <trim prefix="(" prefixOverrides="and" suffix=")">      // 通过 trim 标签设置拼接 sql 的前缀后缀以及间断点。
+                      <foreach collection="criteria.criteria" item="criterion">
+                        <choose>
+                          <when test="criterion.noValue">
+                            and ${criterion.condition}
+                          </when>
+                          <when test="criterion.singleValue">
+                            and ${criterion.condition} #{criterion.value}
+                          </when>
+                          <when test="criterion.betweenValue">
+                            and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                          </when>
+                          <when test="criterion.listValue">
+                            and ${criterion.condition}
+                            <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                              #{listItem}
+                            </foreach>
+                          </when>
+                        </choose>
+                      </foreach>
+                    </trim>
+                  </if>
+                </foreach>
+              </where>
+           </sql>
+       除去 通过 实体类与简单类型（例如：java.lang.String ）还可以直接使用 map 和 list ，使用的时候要注意参数的位置与个数。      
+``` 

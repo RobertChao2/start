@@ -102,62 +102,62 @@
 <script>
 layui.config({
         base : "js/"
-    }).use([ 'form', 'layer', 'jquery', 'table', 'laydate' ],function() {
-            var form = layui.form, table = layui.table, layer = parent.layer === undefined ? layui.layer: parent.layer, laydate = layui.laydate,$ = layui.jquery,
+    }).use([ 'form', 'layer', 'jquery', 'table', 'laydate','upload' ],function() {
+            var upload = layui.upload,form = layui.form, table = layui.table, layer = parent.layer === undefined ? layui.layer: parent.layer, laydate = layui.laydate,$ = layui.jquery,
                 nowTime = new Date().valueOf(),
                 max = null,
-                active = {
-                    search : function() {
-                        var nickname = $('#nickname'), sex = $('#sex option:selected'), status = $('#status option:selected');
-                        createTimeStart = $("#createTimeStart"),createTimeEnd = $("#createTimeEnd");
-                        //执行重载
-                        table.reload('userList',{
-                            page : {
-                                curr : 1
-                                //重新从第 1 页开始
-                            },
-                            where : {
-                                // key: {
-                                nickname : nickname.val(),
-                                sex : sex.val(),
-                                status : status.val(),
-                                createTimeStart : createTimeStart.val(),
-                                createTimeEnd : createTimeEnd.val()
-                                // }
-                            }
-                        });
-                    }
-                };
-
-                var start = laydate.render({
-                    elem : '#createTimeStart',
-                    type : 'datetime',
-                    max : nowTime,
-                    btns : [ 'clear', 'confirm' ],
-                    done : function(value, date) {
-                        endMax = end.config.max;
-                        end.config.min = date;
-                        end.config.min.month = date.month - 1;
-                    }
-                });
-
-                var end = laydate.render({
-                    elem : '#createTimeEnd',
-                    type : 'datetime',
-                    max : nowTime,
-                    done : function(value, date) {
-                        if ($.trim(value) == '') {
-                            var curDate = new Date();
-                            date = {
-                                'date' : curDate.getDate(),
-                                'month' : curDate.getMonth() + 1,
-                                'year' : curDate.getFullYear()
-                            };
+            active = {
+                search : function() {
+                    var nickname = $('#nickname'), sex = $('#sex option:selected'), status = $('#status option:selected');
+                    createTimeStart = $("#createTimeStart"),createTimeEnd = $("#createTimeEnd");
+                    //执行重载
+                    table.reload('userList',{
+                        page : {
+                            curr : 1
+                            //重新从第 1 页开始
+                        },
+                        where : {
+                            // key: {
+                            nickname : nickname.val(),
+                            sex : sex.val(),
+                            status : status.val(),
+                            createTimeStart : createTimeStart.val(),
+                            createTimeEnd : createTimeEnd.val()
+                            // }
                         }
-                        start.config.max = date;
-                        start.config.max.month = date.month - 1;
+                    });
+                }
+            };
+
+            var start = laydate.render({
+                elem : '#createTimeStart',
+                type : 'datetime',
+                max : nowTime,
+                btns : [ 'clear', 'confirm' ],
+                done : function(value, date) {
+                    endMax = end.config.max;
+                    end.config.min = date;
+                    end.config.min.month = date.month - 1;
+                }
+            });
+
+            var end = laydate.render({
+                elem : '#createTimeEnd',
+                type : 'datetime',
+                max : nowTime,
+                done : function(value, date) {
+                    if ($.trim(value) == '') {
+                        var curDate = new Date();
+                        date = {
+                            'date' : curDate.getDate(),
+                            'month' : curDate.getMonth() + 1,
+                            'year' : curDate.getFullYear()
+                        };
                     }
-                })
+                    start.config.max = date;
+                    start.config.max.month = date.month - 1;
+                }
+            })
 
             // 批量导入员工信息
             upload.render({
@@ -200,12 +200,12 @@ layui.config({
                 ,url: '/api/upload/'
                 ,size: 1024*5 //限定大小
             });
-            //  上传文件重载步骤二：重载该实例，支持重载全部基础参数
-            uploadInst.reload({     // 渲染重载之后的
-                accept: 'images' //只允许上传图片
-                ,acceptMime: 'image/*' //只筛选图片
-                ,size: 1024*2 //限定大小
-            });
+            //  上传文件重载步骤二：重载该实例，支持重载全部基础参数。当前这个操作报错，需要修改（2019-08-03）。
+            // uploadInst.reload({     // 渲染重载之后的
+            //     accept: 'images' //只允许上传图片
+            //     ,acceptMime: 'image/*' //只筛选图片
+            //     ,size: 1024*2 //限定大小
+            // });
 
             // 加载页面数据
             table.render({
@@ -258,12 +258,14 @@ layui.config({
                     {
                         field : 'status',
                         title : '状态',
-                        templet : '#statusTpl'
+                        templet : '#statusTpl',
+                        width:50
                     },
                     {
                         field : 'createTime',
                         title : '注册日期',
-                        templet : '<div>{{ formatTime(d.createTime,"yyyy-MM-dd hh:mm:ss")}}</div>'
+                        templet : '<div>{{ formatTime(d.createTime,"yyyy-MM-dd hh:mm:ss")}}</div>',
+                        width:200
                     }, {
                         title : '操作',
                         toolbar : '#barEdit',
@@ -272,7 +274,7 @@ layui.config({
                 page : true  // 开启分页
                 ,where: {timestamp: (new Date()).valueOf()}
             });
-
+             /*  亦可不用编写时间的 JS 方法，使用 Layui 的方法参数  ,templet: "<div>{{layui.util.toDateString(d.ordertime, 'yyyy-MM-dd HH:mm:ss')}}</div>",*/
             //监听工具条
             table.on('tool(userList)', function(obj) {
                 var data = obj.data;    // 获取当前操作行的数据
