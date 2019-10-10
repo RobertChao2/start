@@ -20,7 +20,7 @@
 
     <!-- 依赖子项目 -->
     <modules>
-        <module></module>
+        <!--<module></module>-->
     </modules>
 
     <dependencies>

@@ -4,8 +4,8 @@
 # 上传内容摘要与日期（2019.07.01 始）
 1. Spring Boot 新建完成后台的第一次提交，目前登录后可以访问 /hello，后期增加更多内容。  === 2019-07-10 20:27
 2. 修改内容，检测当前上传的 Git 任务是否正确。 === 2019-07-10 20:33
-3. 集成 shiro ,添加了 Shiro 的全局配置，以及定义的 Realm 域，并设置到启动的 Config 中。    === 2019-07-10 21:55
-4. 集成 shiro，修改了其中的配置内容，使得 Spring Boot 集成 shiro 可以运行。    === 2019-07-10 22:31
+3. 集成 Shiro ,添加了 Shiro 的全局配置，以及定义的 Realm 域，并设置到启动的 Config 中。    === 2019-07-10 21:55
+4. 集成 Shiro，修改了其中的配置内容，使得 Spring Boot 集成 shiro 可以运行。    === 2019-07-10 22:31
 5. 集成 MyBatis 。通过 @Select 等注解进行 CRUD 的操作，增加了一个 Modeule HPA ，方便新建带有 JPA 注解的实体类。具体的方法如下。  2019-07-11 18:28
 6. 集成 JPA 。丢失 JPA 自动生成的注解实体类。补上内容。  === 2019-07-11  18:32
 7. 引入自定义的注解，Controller、Service、ServiceImpl，还有就是验证码的引入。页面元素的配置以及css、js、html 的使用。 === 2019-07-13 00:37
@@ -13,6 +13,8 @@
 9. 增加了 Redis 的配置工具类，实现了部分测试的功能，新增了 Spring Boot 集成 WebMagic (爬虫)的内容，页面、后台、测试都有。  === 2019-07-27  23:25
 10. 昨天上传内容的时候出现了问题，显示结果为 远程 Github 的内容没有收到更新，但是 idea 提交更新已经结束了。出现 detached HEAD 这个问题。解决步骤如下。这个版本上传了一个测试的内容。 === 2019-07-28 12:38
 11. 通过 Create README.md 内容。 === 2019-07-28 13:31
+12. 批量增加用户的功能，通过 Excel 执行导入功能。
+13. 项目部署，通过 NGINX 反向代理 + Spring Session + Redis 。=== 2019年10月10日11:23:07
 ## 上传内容的详细设计
 1. 新建 Spring Boot 的项目， https://start.spring.io/  添加项目依赖，actuator、jpa、web、devtools、spring-security 等内容。并新建南了 TestController 
 2. 测试上传内容，并执行内容无误。Git 的 idea 的命令使用。（git commit && add等等。）git add 添加到要提交到队列中，git commit 中提交到本地仓库，git push 传到远程仓库。
@@ -194,8 +196,9 @@ layui.use(['upload','jquery','layer'],function(){
 * 1.1.1、**使用 layui.use 监听 select 事件。**
 
 * **HTML表单页面：**
+~~~~
     <select lay-filter="demo" lay-verify="required">   lay-filter 表示监听，lay-verify 表示验证。
-
+~~~~
 * **JavaScript语法：**
 
 ```javascript
